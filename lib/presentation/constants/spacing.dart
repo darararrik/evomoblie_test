@@ -1,4 +1,6 @@
 abstract class S {
+  static const double p2 = 2;
+  static const double p4 = 4;
   static const double p6 = 6;
   static const double p8 = 8;
   static const double p10 = 10;
@@ -12,5 +14,13 @@ abstract class S {
   static const double p26 = 26;
   static const double p28 = 28;
   static const double p30 = 30;
+  static const double p32 = 32;
+  static const double p36 = 36;
+  static const double p44 = 44;
   static const double p48 = 48;
+  static const double p54 = 54;
+  static const double p69 = 69;
+  static const double p76 = 76;
+  static const double p84 = 84;
+  static const double p118 = 118;
 }

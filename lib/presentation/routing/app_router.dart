@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+
 import 'package:evomoblie_test/presentation/routing/app_router.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')
@@ -13,5 +14,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: StatiscticTabRoute.page),
       ],
     ),
+    AutoRoute(page: CalendarRoute.page),
+    AutoRoute(page: MonthDetailRoute.page),
   ];
 }

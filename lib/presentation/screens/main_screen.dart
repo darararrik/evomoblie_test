@@ -1,11 +1,14 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:evomoblie_test/presentation/constants/icons.dart';
-import 'package:evomoblie_test/presentation/constants/spacing.dart';
-import 'package:evomoblie_test/presentation/extensions/context_x.dart';
-import 'package:evomoblie_test/presentation/routing/app_router.gr.dart';
-import 'package:evomoblie_test/presentation/utils/app_icon.dart';
-import 'package:evomoblie_test/presentation/utils/padding.dart';
 import 'package:flutter/material.dart';
+
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'package:evomoblie_test/presentation/constants/constants.dart';
+import 'package:evomoblie_test/presentation/extensions/context_x.dart';
+import 'package:evomoblie_test/presentation/extensions/date_time_x.dart';
+import 'package:evomoblie_test/presentation/routing/app_router.gr.dart';
+import 'package:evomoblie_test/presentation/utils/utils.dart';
+import 'package:evomoblie_test/state/mood_cubit.dart';
 
 @RoutePage()
 class MainScreen extends StatelessWidget {
@@ -20,31 +23,33 @@ class MainScreen extends StatelessWidget {
           headerSliverBuilder: (context, innerBoxScrolled) {
             return [
               SliverAppBar(
-                floating: true,
-                pinned: true,
                 actionsPadding: P(right: S.p20),
                 title: Text(
-                  '1 января 09:00',
+                  context
+                      .read<MoodDiaryCubit>()
+                      .state
+                      .selectedDate
+                      .toFormString(),
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
-                    color: context.colors.gray200,
+                    color: context.colors.grey200,
                   ),
                 ),
                 actions: [
                   GestureDetector(
                     child: Icon(
                       Icons.calendar_month_rounded,
-                      color: context.colors.gray200,
+                      color: context.colors.grey200,
                     ),
-                    onTap: () {},
+                    onTap: () => context.pushRoute(CalendarRoute()),
                   ),
                 ],
                 bottom: PreferredSize(
                   preferredSize: const Size.fromHeight(S.p30),
                   child: DecoratedBox(
                     decoration: BoxDecoration(
-                      color: context.colors.gray400,
+                      color: context.colors.grey400,
                       borderRadius: BorderRadius.circular(S.p48),
                     ),
                     child: TabBar(
@@ -54,7 +59,6 @@ class MainScreen extends StatelessWidget {
                           height: S.p30,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: .min,
                             children: [
                               AppIcon(AppIcons.diary, size: S.p12),
                               SizedBox(width: S.p6),
@@ -66,7 +70,6 @@ class MainScreen extends StatelessWidget {
                           height: S.p30,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: .min,
                             children: [
                               AppIcon(AppIcons.statistics, size: S.p12),
                               SizedBox(width: S.p6),
