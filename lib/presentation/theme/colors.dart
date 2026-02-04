@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors extends ThemeExtension<AppColors> {
   final Color orange;
+  final Color highlightColor;
   final Color black;
   final Color white;
   final Color grey100;
@@ -15,6 +16,7 @@ class AppColors extends ThemeExtension<AppColors> {
   // final BoxShadow shadow3;
   AppColors({
     required this.orange,
+    required this.highlightColor,
     required this.black,
     required this.white,
     required this.grey100,
@@ -30,6 +32,7 @@ class AppColors extends ThemeExtension<AppColors> {
   @override
   AppColors copyWith({
     Color? orange,
+    Color? highlightColor,
     Color? black,
     Color? white,
     Color? grey100,
@@ -44,6 +47,7 @@ class AppColors extends ThemeExtension<AppColors> {
   }) {
     return AppColors(
       orange: orange ?? this.orange,
+      highlightColor: highlightColor ?? this.highlightColor,
       black: black ?? this.black,
       white: white ?? this.white,
       grey100: grey100 ?? this.grey100,
@@ -65,6 +69,8 @@ class AppColors extends ThemeExtension<AppColors> {
     }
     return AppColors(
       orange: Color.lerp(orange, other.orange, t) ?? orange,
+      highlightColor:
+          Color.lerp(highlightColor, other.highlightColor, t) ?? highlightColor,
       black: Color.lerp(black, other.black, t) ?? black,
       white: Color.lerp(white, other.white, t) ?? white,
       grey100: Color.lerp(grey100, other.grey100, t) ?? grey100,

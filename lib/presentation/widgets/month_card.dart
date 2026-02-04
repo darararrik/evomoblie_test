@@ -37,7 +37,7 @@ class MonthCard extends StatelessWidget {
           child: Container(
             decoration: isToday
                 ? BoxDecoration(
-                    color: Color(0x3EFF8702), // TODO: вынести в константы
+                    color: context.colors.highlightColor,
                     shape: BoxShape.circle,
                   )
                 : null,

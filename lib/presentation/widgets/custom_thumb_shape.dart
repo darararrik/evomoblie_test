@@ -30,7 +30,7 @@ class CustomThumbShape extends SliderComponentShape {
 
     if (elevation > 0) {
       final Paint shadowPaint = Paint()
-        ..color = Colors.black.withOpacity(0.2)
+        ..color = Colors.black
         ..maskFilter = MaskFilter.blur(BlurStyle.normal, elevation);
       canvas.drawCircle(center, thumbRadius + 2, shadowPaint);
     }

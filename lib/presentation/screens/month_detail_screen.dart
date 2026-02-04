@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:evomoblie_test/presentation/constants/spacing.dart';
 import 'package:evomoblie_test/presentation/extensions/context_x.dart';
 import 'package:evomoblie_test/presentation/routing/app_router.gr.dart';
+import 'package:evomoblie_test/presentation/utils/locale.dart';
 import 'package:evomoblie_test/presentation/utils/padding.dart';
 import 'package:evomoblie_test/state/mood_cubit.dart';
 
@@ -60,16 +61,8 @@ class _MonthDetailScreenState extends State<MonthDetailScreen> {
           lastDate: DateTime(2026, 12, 31),
           calendarType: CalendarDatePicker2Type.single,
           calendarViewMode: CalendarDatePicker2Mode.scroll,
-          selectedDayHighlightColor: const Color(0x3EFF8702),
-          weekdayLabels: [
-            'Вс',
-            'Пн',
-            'Вт',
-            'Ср',
-            'Чт',
-            'Пт',
-            'Сб',
-          ].map((e) => e.toUpperCase()).toList(),
+          selectedDayHighlightColor: context.colors.highlightColor,
+          weekdayLabels: getWeekdayLabels(context),
           dayTextStyle: const TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 18,

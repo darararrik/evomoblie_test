@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:evomoblie_test/domain/mood_repo.dart';
@@ -33,6 +35,8 @@ class MoodDiaryCubit extends Cubit<MoodDiaryState> {
   void updateNote(String text) => emit(state.copyWith(note: text));
 
   void save() {
-    print("Saved: ${state.selectedMood?.name}, Stress: ${state.stressLevel}");
+    if (kDebugMode) {
+      print("Saved: ${state.selectedMood?.name}, Stress: ${state.stressLevel}");
+    }
   }
 }

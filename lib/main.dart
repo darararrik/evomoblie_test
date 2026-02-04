@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:evomoblie_test/data/mood_local_datasource.dart';
 import 'package:evomoblie_test/data/mood_repository.dart';
 import 'package:evomoblie_test/domain/mood_repo.dart';
+import 'package:evomoblie_test/presentation/l10n/app_localizations.dart';
 import 'package:evomoblie_test/presentation/routing/app_router.dart';
 import 'package:evomoblie_test/presentation/theme/theme.dart';
 import 'package:evomoblie_test/state/mood_cubit.dart';
@@ -31,6 +32,7 @@ class MainApp extends StatelessWidget {
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
+            AppLocalizations.delegate,
           ],
           supportedLocales: [Locale('ru')],
           routerConfig: appRouter.config(),

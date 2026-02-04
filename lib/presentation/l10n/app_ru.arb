@@ -1,0 +1,16 @@
+{
+    "moodDiaryTabTitle": "Дневник настроения",
+    "statisticsTabTitle": "Статистика",
+    "whatAreYouFeeling": "Что чувствуешь?",
+    "stressLevel": "Уровень стресса",
+    "selfEsteemLevel": "Самооценка",
+    "save": "Сохранить",
+    "low": "Низкий",
+    "high": "Высокий",
+    "uncertainty": "Неуверенность",
+    "confidence": "Уверенность",
+    "note": "Заметка",
+    "addNote": "Добавить заметку",
+    "addNoteHint": "Введите заметку",
+    "today": "Сегодня"
+}

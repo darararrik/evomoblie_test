@@ -29,7 +29,7 @@ class MoodDiaryTab extends StatelessWidget {
                     Padding(
                       padding: P(horizontal: S.p20, top: S.p30),
                       child: Text(
-                        "Что чувствуешь?",
+                        context.l10n.whatAreYouFeeling,
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w800,
@@ -99,21 +99,21 @@ class MoodDiaryTab extends StatelessWidget {
                     ],
 
                     AppSlider(
-                      title: "Уровень стресса",
+                      title: context.l10n.stressLevel,
                       value: state.stressLevel,
                       onChanged: (value) =>
                           context.read<MoodDiaryCubit>().updateStress(value),
-                      lowText: 'Низкий',
-                      highText: 'Высокий',
+                      lowText: context.l10n.low,
+                      highText: context.l10n.high,
                     ),
                     AppSlider(
-                      title: "Самооценка",
+                      title: context.l10n.selfEsteemLevel,
                       value: state.selfEsteemLevel,
                       onChanged: (value) => context
                           .read<MoodDiaryCubit>()
                           .updateSelfEsteem(value),
-                      lowText: 'Неуверенность',
-                      highText: 'Уверенность',
+                      lowText: context.l10n.uncertainty,
+                      highText: context.l10n.confidence,
                     ),
 
                     NoteInput(
@@ -131,7 +131,7 @@ class MoodDiaryTab extends StatelessWidget {
                               ? () => context.read<MoodDiaryCubit>().save()
                               : null,
                           child: Text(
-                            "Сохранить",
+                            context.l10n.save,
                             style: TextStyle(
                               color: context.colors.white,
                               fontSize: 20,

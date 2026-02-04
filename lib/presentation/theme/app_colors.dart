@@ -2,6 +2,7 @@ part of 'theme.dart';
 
 final AppColors _colors = AppColors(
   orange: const Color(0xFFFF8702),
+  highlightColor: const Color(0x3EFF8702),
   black: const Color(0xFF4C4C69),
   white: const Color(0xFFFFFFFF),
   grey100: const Color(0xFFF5F5F5),
