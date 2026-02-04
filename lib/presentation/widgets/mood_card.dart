@@ -37,7 +37,9 @@ class MoodCard extends StatelessWidget {
               Image.asset(mood.iconPath, width: S.p54),
               Text(
                 mood.name,
-                style: TextStyle(fontSize: 11, color: context.colors.black),
+                style: context.typography.bodySmall.copyWith(
+                  color: context.colors.black,
+                ),
               ),
             ],
           ),

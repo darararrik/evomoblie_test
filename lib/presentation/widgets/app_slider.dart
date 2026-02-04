@@ -27,14 +27,7 @@ class AppSlider extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w800,
-              color: context.colors.black,
-            ),
-          ),
+          Text(title, style: context.typography.titleSmall),
           Padding(
             padding: P(top: S.p20),
             child: DecoratedBox(
@@ -64,18 +57,14 @@ class AppSlider extends StatelessWidget {
                         children: [
                           Text(
                             lowText,
-                            style: TextStyle(
-                              color: context.colors.grey500, // Серый X
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
+                            style: context.typography.bodySmall.copyWith(
+                              color: context.colors.grey500,
                             ),
                           ),
                           Text(
                             highText,
-                            style: TextStyle(
-                              color: context.colors.grey500, // Серый X
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
+                            style: context.typography.bodySmall.copyWith(
+                              color: context.colors.grey500,
                             ),
                           ),
                         ],

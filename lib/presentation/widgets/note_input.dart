@@ -16,14 +16,7 @@ class NoteInput extends StatelessWidget {
       children: [
         Padding(
           padding: P(horizontal: S.p20, top: S.p36),
-          child: Text(
-            "Заметки",
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w800,
-              color: context.colors.black,
-            ),
-          ),
+          child: Text("Заметки", style: context.typography.titleSmall),
         ),
         Padding(
           padding: P(horizontal: S.p20, top: S.p20),
@@ -38,10 +31,7 @@ class NoteInput extends StatelessWidget {
               onChanged: onChanged,
               decoration: InputDecoration(
                 hintText: "Введите заметку",
-                hintStyle: TextStyle(
-                  color: context.colors.grey200,
-                  fontSize: 14,
-                ),
+                hintStyle: context.typography.bodyMedium,
                 contentPadding: P(all: S.p10),
                 border: InputBorder.none,
               ),

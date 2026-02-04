@@ -30,11 +30,7 @@ class MainScreen extends StatelessWidget {
                       .state
                       .selectedDate
                       .toFormString(),
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: context.colors.grey200,
-                  ),
+                  style: context.typography.titleMedium,
                 ),
                 actions: [
                   GestureDetector(

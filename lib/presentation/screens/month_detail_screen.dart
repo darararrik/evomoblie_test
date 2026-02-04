@@ -42,16 +42,7 @@ class _MonthDetailScreenState extends State<MonthDetailScreen> {
           ),
           onTap: () => context.pop(),
         ),
-        actions: [
-          Text(
-            'Сегодня',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: context.colors.grey200,
-            ),
-          ),
-        ],
+        actions: [Text('Сегодня', style: context.typography.titleMedium)],
       ),
       body: CalendarDatePicker2(
         config: CalendarDatePicker2Config(
@@ -63,14 +54,13 @@ class _MonthDetailScreenState extends State<MonthDetailScreen> {
           calendarViewMode: CalendarDatePicker2Mode.scroll,
           selectedDayHighlightColor: context.colors.highlightColor,
           weekdayLabels: getWeekdayLabels(context),
-          dayTextStyle: const TextStyle(
+          dayTextStyle: context.typography.titleMedium.copyWith(
             fontWeight: FontWeight.w500,
-            fontSize: 18,
+            color: context.colors.black,
           ),
-          selectedDayTextStyle: TextStyle(
+          selectedDayTextStyle: context.typography.titleMedium.copyWith(
             color: context.colors.black,
             fontWeight: FontWeight.w500,
-            fontSize: 18,
           ),
         ),
         value: _singleDatePickerValueWithDefaultValue,

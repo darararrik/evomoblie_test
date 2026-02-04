@@ -30,11 +30,7 @@ class MoodDiaryTab extends StatelessWidget {
                       padding: P(horizontal: S.p20, top: S.p30),
                       child: Text(
                         context.l10n.whatAreYouFeeling,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w800,
-                          color: context.colors.black,
-                        ),
+                        style: context.typography.titleSmall,
                       ),
                     ),
                     Padding(
@@ -85,7 +81,7 @@ class MoodDiaryTab extends StatelessWidget {
                                 padding: P(horizontal: S.p8, vertical: S.p2),
                                 child: Text(
                                   value,
-                                  style: TextStyle(
+                                  style: context.typography.bodyMedium.copyWith(
                                     color: isSelected
                                         ? context.colors.white
                                         : context.colors.black,
@@ -132,10 +128,7 @@ class MoodDiaryTab extends StatelessWidget {
                               : null,
                           child: Text(
                             context.l10n.save,
-                            style: TextStyle(
-                              color: context.colors.white,
-                              fontSize: 20,
-                            ),
+                            style: context.typography.bodyLarge,
                           ),
                         ),
                       ),

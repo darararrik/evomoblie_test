@@ -1,18 +1,20 @@
+import 'package:evomoblie_test/presentation/theme/app_typography.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:evomoblie_test/presentation/constants/spacing.dart';
-import 'package:evomoblie_test/presentation/theme/colors.dart';
+import 'package:evomoblie_test/presentation/theme/app_colors.dart';
 import 'package:evomoblie_test/presentation/utils/padding.dart';
 import 'package:evomoblie_test/presentation/widgets/custom_thumb_shape.dart';
 import 'package:evomoblie_test/presentation/widgets/custom_tick_mark_shape.dart';
 
-part 'app_colors.dart';
+part 'colors.dart';
+part 'typography.dart';
 
 class AppTheme {
   static ThemeData get theme => ThemeData(
-    extensions: [_colors],
+    extensions: [_colors, _typography],
     textTheme: GoogleFonts.nunitoTextTheme(),
     scaffoldBackgroundColor: _colors.white,
     appBarTheme: AppBarTheme(

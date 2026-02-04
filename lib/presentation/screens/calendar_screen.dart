@@ -31,16 +31,7 @@ class CalendarScreen extends StatelessWidget {
               ),
               onTap: () => context.pop(),
             ),
-            actions: [
-              Text(
-                'Сегодня',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                  color: context.colors.grey200,
-                ),
-              ),
-            ],
+            actions: [Text('Сегодня', style: context.typography.titleMedium)],
           ),
 
           SliverPadding(
@@ -49,11 +40,7 @@ class CalendarScreen extends StatelessWidget {
               child: Center(
                 child: Text(
                   '$currentYear',
-                  style: TextStyle(
-                    fontSize: 26,
-                    fontWeight: FontWeight.w800,
-                    color: context.colors.black,
-                  ),
+                  style: context.typography.titleLarge,
                 ),
               ),
             ),
@@ -84,9 +71,8 @@ class CalendarScreen extends StatelessWidget {
                           DateFormat.MMMM(
                             'ru',
                           ).format(monthDate).capitalizeFirst(),
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
+                          style: context.typography.bodyMediumBold.copyWith(
+                            color: context.colors.black,
                           ),
                         ),
                       ),

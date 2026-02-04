@@ -42,14 +42,7 @@ class MonthCard extends StatelessWidget {
                   )
                 : null,
             padding: const EdgeInsets.all(S.p4),
-            child: Text(
-              '$day',
-              style: TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w500,
-                color: context.colors.black,
-              ),
-            ),
+            child: Text('$day', style: context.typography.labelSmall),
           ),
         );
       },
